@@ -1,0 +1,7 @@
+[general]
+name=Test Plugin
+description=My first QField plugin
+author=FeelGood GS
+icon=icon.svg
+version=0.1
+homepage=
