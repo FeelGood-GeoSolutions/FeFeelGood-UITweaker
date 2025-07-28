@@ -34,7 +34,8 @@ Item {
     property point displayPosition: coordinateLocator ? coordinateLocator.displayPosition : Qt.point(width / 2, height / 2)
     // Add this function inside your Item (e.g., after your properties)
     function logAllTextObjects(obj, path) {
-        if (!obj) return;
+        if (!obj)
+            return;
         path = path || [];
         // Check if object has a 'text' property and it's set (not empty)
         if (obj.hasOwnProperty("text") && obj.text !== undefined && obj.text !== "") {
@@ -50,7 +51,8 @@ Item {
         }
     }
     function logAllObjectNames(obj, path) {
-        if (!obj) return;
+        if (!obj)
+            return;
         path = path || [];
         // Check if object has an 'objectName' property and it's set (not empty)
         if (obj.hasOwnProperty("objectName") && obj.objectName !== undefined && obj.objectName !== "") {
@@ -183,7 +185,9 @@ Item {
             multiplierSettings.selectedMultiplier = comboBoxMultipliers.currentText;
             multiplierSettings.selectedMultiplierIndex = comboBoxMultipliers.currentIndex;
             multiplierSettings.showCrosshairOverlay = crosshairOverlayCheckbox.checked;
-            plugin.recalculateLayerFontSize()
+            plugin.recalculateLayerFontSize();
+
+            customCrosshair.visible = multiplierSettings.showCrosshairOverlay && projectInfo.stateMode === "digitize";
         }
     }
 
@@ -226,9 +230,9 @@ Item {
     }
 
     Connections {
-    target: mainWindow
-    onToggleDigitizeMode: {
-        customCrosshair.visible = multiplierSettings.showCrosshairOverlay && projectInfo.stateMode === "digitize";
+        target: mainWindow
+        onToggleDigitizeMode: {
+            customCrosshair.visible = multiplierSettings.showCrosshairOverlay && projectInfo.stateMode === "digitize";
+        }
     }
-}
 }
