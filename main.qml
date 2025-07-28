@@ -32,41 +32,6 @@ Item {
 
     // This is the key - track the displayPosition from coordinateLocator
     property point displayPosition: coordinateLocator ? coordinateLocator.displayPosition : Qt.point(width / 2, height / 2)
-    // Add this function inside your Item (e.g., after your properties)
-    function logAllTextObjects(obj, path) {
-        if (!obj)
-            return;
-        path = path || [];
-        // Check if object has a 'text' property and it's set (not empty)
-        if (obj.hasOwnProperty("text") && obj.text !== undefined && obj.text !== "") {
-            var pathStr = path.length > 0 ? path.join(" -> ") : "(root)";
-            console.log("Object with text at path:", pathStr, "| Text:", obj.text);
-            iface.logMessage("Object with text at path: " + pathStr + " | Text: " + obj.text);
-        }
-        // Recursively check children if present
-        if (obj.children && obj.children.length > 0) {
-            for (var i = 0; i < obj.children.length; i++) {
-                logAllTextObjects(obj.children[i], path.concat([i]));
-            }
-        }
-    }
-    function logAllObjectNames(obj, path) {
-        if (!obj)
-            return;
-        path = path || [];
-        // Check if object has an 'objectName' property and it's set (not empty)
-        if (obj.hasOwnProperty("objectName") && obj.objectName !== undefined && obj.objectName !== "") {
-            var pathStr = path.length > 0 ? path.join(" -> ") : "(root)";
-            console.log("Object with objectName at path:", pathStr, "| objectName:", obj.objectName);
-            iface.logMessage("Object with objectName at path: " + pathStr + " | objectName: " + obj.objectName);
-        }
-        // Recursively check children if present
-        if (obj.children && obj.children.length > 0) {
-            for (var i = 0; i < obj.children.length; i++) {
-                logAllObjectNames(obj.children[i], path.concat([i]));
-            }
-        }
-    }
 
     function recalculateLayerFontSize() {
         let multiplier = multiplierSettings.selectedMultiplier > 0.0 ? multiplierSettings.selectedMultiplier : 1.0;
@@ -234,5 +199,9 @@ Item {
         onToggleDigitizeMode: {
             customCrosshair.visible = multiplierSettings.showCrosshairOverlay && projectInfo.stateMode === "digitize";
         }
+    }
+
+    function configure() {
+        layerTextSizeSettings.open();
     }
 }
