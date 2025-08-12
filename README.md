@@ -7,7 +7,7 @@ Stay tuned for more!
 
 ## Installation
 
-1. Copy the [link to the zipped repository]([https://github.com/FeelGood-GeoSolutions/FeelGood-OneTapMeasurement/archive/refs/heads/main.zip](https://github.com/FeelGood-GeoSolutions/FeFeelGood-UITweaker/archive/refs/heads/main.zip))
+1. Copy the [link to the zipped repository](https://github.com/FeelGood-GeoSolutions/FeelGood-UITweaker/archive/refs/heads/main.zip)
 2. In QField, go to **Settings → Manage Plugins → Install plugin from URL**
 3. Paste the copied link and confirm
 4. Grant plugin permissions if prompted
