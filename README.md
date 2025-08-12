@@ -29,7 +29,7 @@ We offer professional plugin development tailored to your workflow. [Contact us]
 
 ## Bug Reports & Suggestions
 
-If you encounter any bugs 🪲 or have suggestions for improvements, please open an issue on our [GitHub Issues page](https://github.com/FeelGood-GeoSolutions/FeelGood-OneTapMeasurement/issues) or contact us directly.
+If you encounter any bugs 🪲 or have suggestions for improvements, please open an issue on our [GitHub Issues page](https://github.com/FeelGood-GeoSolutions/FeelGood-UITweaker/issues) or contact us directly.
 
 
 ## About Us
