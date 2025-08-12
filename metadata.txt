@@ -1,7 +1,7 @@
 [general]
-name=Test Plugin
-description=My first QField plugin
-author=FeelGood GS
+name=FeelGood UITweaker
+description=Adjust layer text size and add a more visible digitize cursor. 
+author=FeelGood GeoSolutions
 icon=icon.svg
-version=0.1
-homepage=
+version=0.2
+homepage=https://www.feelgoodgeosolutions.de
